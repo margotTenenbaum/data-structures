@@ -34,4 +34,12 @@ class QueueTest {
         boolean actual = testQueue.isEmpty();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void peekShouldReturnFirstItemInQueue() {
+        int expected = 3;
+        testQueue.add(3);
+        int actual = testQueue.peek();
+        assertEquals(expected, actual);
+    }
 }

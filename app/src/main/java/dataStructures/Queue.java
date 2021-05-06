@@ -30,4 +30,8 @@ public class Queue {
             this.tail = newNode;
         }
     }
+
+    public int peek() {
+        return this.head.data;
+    }
 }
