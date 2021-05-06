@@ -26,4 +26,12 @@ class QueueTest {
         boolean actual = testQueue.isEmpty();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void queueShouldNotBeEmptyAfterNodeAdded() {
+        boolean expected = false;
+        testQueue.add(3);
+        boolean actual = testQueue.isEmpty();
+        assertEquals(expected, actual);
+    }
 }
