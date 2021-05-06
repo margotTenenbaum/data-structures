@@ -34,4 +34,15 @@ public class Queue {
     public int peek() {
         return this.head.data;
     }
+
+    public int remove() {
+        int removed = this.head.data;
+        if (this.head.next != null) {
+            this.head = this.head.next;
+        } else {
+            this.head = null;
+            this.tail = null;
+        }
+        return removed;
+    }
 }

@@ -42,4 +42,14 @@ class QueueTest {
         int actual = testQueue.peek();
         assertEquals(expected, actual);
     }
+
+    @Test
+    void removeShouldRemoveFirstItemInQueueAndReturnData() {
+        testQueue.add(3);
+        testQueue.add(4);
+        int expected = 3;
+        int actual = testQueue.remove();
+        assertEquals(expected, actual);
+        assertEquals(4, testQueue.peek());
+    }
 }
