@@ -52,4 +52,23 @@ class QueueTest {
         assertEquals(expected, actual);
         assertEquals(4, testQueue.peek());
     }
+
+    @Test
+    void removeShouldRemoveFirstItemInQueueOfLengthOne() {
+        testQueue.add(3);
+        testQueue.remove();
+        boolean expected = true;
+        boolean actual = testQueue.isEmpty();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void tailShouldBeEmptyIfOnlyItemInQueueIsRemoved() {
+        testQueue.add(3);
+        testQueue.remove();
+        boolean expected = true;
+        boolean actual = testQueue.isTailNull();
+        assertEquals(expected, actual);
+    }
+
 }

@@ -13,7 +13,7 @@ public class Queue {
     private QNode tail;
 
     public boolean isEmpty() {
-        if (this.head == null) {
+        if (this.head == null && this.tail == null) {
             return true;
         } else {
             return false;
@@ -44,5 +44,13 @@ public class Queue {
             this.tail = null;
         }
         return removed;
+    }
+
+    public boolean isTailNull() {
+        if (this.tail == null) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
