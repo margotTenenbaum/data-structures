@@ -37,4 +37,25 @@ public class bubbleSortTest {
         bubbleSort.bubblesort(threeNums);
         assertArrayEquals(expected, threeNums);
     }
+
+    @Test
+    public void bubbleSort_sortsArrayOfPositiveNumbers() {
+        int[] expected = {1, 2, 3, 4, 8};
+        bubbleSort.bubblesort(allPositive);
+        assertArrayEquals(expected, allPositive);
+    }
+
+    @Test
+    public void bubbleSort_sortsArrayWithNegativeNumbers() {
+        int[] expected = { -8, -4, 1, 2, 3};
+        bubbleSort.bubblesort(withNegatives);
+        assertArrayEquals(expected, withNegatives);
+    }
+
+    @Test
+    public void bubbleSort_sortsArrayWithDuplicateNumbers() {
+        int[] expected = { 1, 2, 2, 3, 4, 4, 8};
+        bubbleSort.bubblesort(withDoubles);
+        assertArrayEquals(expected, withDoubles);
+    }
 }
