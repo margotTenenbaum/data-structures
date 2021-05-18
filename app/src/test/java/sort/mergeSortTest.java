@@ -37,4 +37,25 @@ public class mergeSortTest {
         mergeSort.mergesort(threeNums);
         assertArrayEquals(expected, threeNums);
     }
+
+    @Test
+    public void mergeSort_sortsArrayOfPositiveNumbers() {
+        int[] expected = {1, 2, 3, 4, 8};
+        mergeSort.mergesort(allPositive);
+        assertArrayEquals(expected, allPositive);
+    }
+
+    @Test
+    public void mergeSort_sortsArrayWithNegativeNumbers() {
+        int[] expected = { -8, -4, 1, 2, 3};
+        mergeSort.mergesort(withNegatives);
+        assertArrayEquals(expected, withNegatives);
+    }
+
+    @Test
+    public void mergeSort_sortsArrayWithDuplicateNumbers() {
+        int[] expected = { 1, 2, 2, 3, 4, 4, 8};
+        mergeSort.mergesort(withDoubles);
+        assertArrayEquals(expected, withDoubles);
+    }
 }
